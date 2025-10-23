@@ -1,0 +1,27 @@
+{
+  "_instructions": "Add your education and certifications here.",
+  "education": [
+    {
+      "degree": "Degree Name (e.g., Bachelor of Science in Computer Science)",
+      "school": "University/College Name",
+      "period": "Month Year - Month Year",
+      "details": "Optional: Notable achievements, GPA, relevant coursework, etc."
+    },
+    {
+      "degree": "Another Degree",
+      "school": "Institution Name",
+      "period": "Year - Year",
+      "details": ""
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certification Name",
+      "issuer": "Issuing Organization"
+    },
+    {
+      "name": "Another Certification",
+      "issuer": "Organization"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "_instructions": "Add your projects here. Each project should showcase your work.",
+    "title": "Project Name",
+    "description": "Brief description of what the project does and its impact (2-3 sentences).",
+    "technologies": [
+      "Tech 1",
+      "Tech 2",
+      "Tech 3"
+    ],
+    "icon": "fas fa-project-diagram",
+    "_iconHelp": "Choose an icon that represents your project type",
+    "github": "https://github.com/username/repo-name",
+    "demo": "https://live-demo-url.com"
+  },
+  {
+    "title": "Another Project",
+    "description": "What makes this project special or challenging.",
+    "technologies": [
+      "Technology A",
+      "Technology B"
+    ],
+    "icon": "fas fa-code",
+    "github": "https://github.com/username/another-repo"
+  }
+]
