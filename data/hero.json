@@ -1,0 +1,59 @@
+{
+  "_instructions": "Hero section content - the first thing visitors see on your portfolio.",
+  "greeting": "Hi, I'm",
+  "name": "Adarsh Umesh",
+  "title": "Product Manager & Full-Stack Engineer",
+  "summary": "Currently driving digital banking innovation at <strong>JPMorgan Chase & Co.</strong> with 5+ years of experience delivering user-focused, scalable solutions across finance and technology domains. Expertise in product strategy, roadmapping, and leading cross-functional teams with a strong technical foundation in full-stack development and agile methodologies.",
+  "highlights": [
+    {
+      "icon": "fas fa-chart-line",
+      "text": "18% User Adoption Increase"
+    },
+    {
+      "icon": "fas fa-users",
+      "text": "Leading Cross-Functional Teams"
+    },
+    {
+      "icon": "fas fa-code",
+      "text": "Full-Stack Technical Expert"
+    }
+  ],
+  "cta": {
+    "buttons": [
+      {
+        "text": "Get In Touch",
+        "href": "#contact",
+        "type": "primary"
+      },
+      {
+        "text": "View My Work",
+        "href": "#projects",
+        "type": "secondary"
+      },
+      {
+        "text": "Resume",
+        "href": "documents/Adarsh_Umesh_Resume.pdf",
+        "type": "secondary",
+        "icon": "fas fa-download",
+        "external": true
+      }
+    ]
+  },
+  "socialLinks": [
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/adarshumesh5",
+      "icon": "fab fa-github"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/adarsh-umesh",
+      "icon": "fab fa-linkedin"
+    },
+    {
+      "platform": "Email",
+      "url": "mailto:connect2adarshum@gmail.com",
+      "icon": "fas fa-envelope"
+    }
+  ]
+}

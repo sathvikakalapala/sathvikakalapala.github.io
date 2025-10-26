@@ -1,4 +1,268 @@
 // ==========================================================================
+// Load Site Configuration (Meta Tags)
+// ==========================================================================
+async function loadSiteConfig() {
+    try {
+        const response = await fetch('data/site-config.json');
+        const config = await response.json();
+
+        // Update meta tags
+        document.title = config.meta.title;
+        document.querySelector('meta[name="description"]').setAttribute('content', config.meta.description);
+        document.querySelector('meta[name="author"]').setAttribute('content', config.meta.author);
+        document.querySelector('meta[name="keywords"]').setAttribute('content', config.meta.keywords);
+    } catch (error) {
+        console.error('Error loading site config:', error);
+    }
+}
+
+// ==========================================================================
+// Load Navigation
+// ==========================================================================
+async function loadNavigation() {
+    try {
+        const response = await fetch('data/navigation.json');
+        const navData = await response.json();
+
+        // Update brand name
+        const navBrand = document.querySelector('.nav-brand a');
+        if (navBrand) {
+            navBrand.textContent = navData.brand.name;
+            navBrand.setAttribute('href', navData.brand.href);
+        }
+
+        // Build navigation menu
+        const navMenu = document.getElementById('navMenu');
+        if (navMenu) {
+            navMenu.innerHTML = '';
+            navData.menuItems.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="${item.href}" class="nav-link">${item.label}</a>`;
+                navMenu.appendChild(li);
+            });
+
+            // Re-attach event listeners for smooth scroll and mobile menu close
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+    } catch (error) {
+        console.error('Error loading navigation:', error);
+    }
+}
+
+// ==========================================================================
+// Load Hero Section
+// ==========================================================================
+async function loadHero() {
+    try {
+        const response = await fetch('data/hero.json');
+        const hero = await response.json();
+
+        // Update hero content
+        const heroGreeting = document.getElementById('heroGreeting');
+        const heroName = document.getElementById('heroName');
+        const heroTitle = document.getElementById('heroTitle');
+        const heroSummary = document.getElementById('heroSummary');
+
+        if (heroGreeting) heroGreeting.textContent = hero.greeting;
+        if (heroName) heroName.textContent = hero.name;
+        if (heroTitle) heroTitle.textContent = hero.title;
+        if (heroSummary) heroSummary.innerHTML = hero.summary;
+
+        // Build highlights
+        const highlightsContainer = document.getElementById('heroHighlights');
+        if (highlightsContainer) {
+            highlightsContainer.innerHTML = '';
+            hero.highlights.forEach(highlight => {
+                const div = document.createElement('div');
+                div.className = 'highlight-item';
+                div.innerHTML = `
+                    <i class="${highlight.icon}"></i>
+                    <span>${highlight.text}</span>
+                `;
+                highlightsContainer.appendChild(div);
+            });
+        }
+
+        // Build CTA buttons
+        const ctaContainer = document.getElementById('heroCTA');
+        if (ctaContainer) {
+            ctaContainer.innerHTML = '';
+            hero.cta.buttons.forEach(button => {
+                const a = document.createElement('a');
+                a.href = button.href;
+                a.className = `btn btn-${button.type}`;
+                if (button.external) a.target = '_blank';
+                a.innerHTML = button.icon ? `<i class="${button.icon}"></i> ${button.text}` : button.text;
+                ctaContainer.appendChild(a);
+            });
+        }
+
+        // Build social links
+        const socialContainer = document.getElementById('heroSocial');
+        if (socialContainer) {
+            socialContainer.innerHTML = '';
+            hero.socialLinks.forEach(social => {
+                const a = document.createElement('a');
+                a.href = social.url;
+                a.target = '_blank';
+                a.setAttribute('aria-label', social.platform);
+                a.innerHTML = `<i class="${social.icon}"></i>`;
+                socialContainer.appendChild(a);
+            });
+        }
+    } catch (error) {
+        console.error('Error loading hero data:', error);
+    }
+}
+
+// ==========================================================================
+// Load About Section
+// ==========================================================================
+async function loadAbout() {
+    try {
+        const response = await fetch('data/about.json');
+        const about = await response.json();
+
+        // Update section title
+        const sectionTitle = document.querySelector('#about .section-title');
+        if (sectionTitle) sectionTitle.textContent = about.sectionTitle;
+
+        // Build paragraphs
+        const textContainer = document.getElementById('aboutText');
+        if (textContainer) {
+            textContainer.innerHTML = '';
+            about.paragraphs.forEach(paragraph => {
+                const p = document.createElement('p');
+                p.textContent = paragraph;
+                textContainer.appendChild(p);
+            });
+        }
+
+        // Build statistics
+        const statsContainer = document.getElementById('aboutStats');
+        if (statsContainer) {
+            statsContainer.innerHTML = '';
+            about.statistics.forEach(stat => {
+                const div = document.createElement('div');
+                div.className = 'stat-item';
+                div.innerHTML = `
+                    <h3>${stat.value}</h3>
+                    <p>${stat.label}</p>
+                `;
+                statsContainer.appendChild(div);
+            });
+        }
+    } catch (error) {
+        console.error('Error loading about data:', error);
+    }
+}
+
+// ==========================================================================
+// Load Contact Section
+// ==========================================================================
+async function loadContact() {
+    try {
+        const response = await fetch('data/contact.json');
+        const contact = await response.json();
+
+        // Update section title
+        const sectionTitle = document.querySelector('#contact .section-title');
+        if (sectionTitle) sectionTitle.textContent = contact.sectionTitle;
+
+        // Build contact info
+        const contactInfoContainer = document.getElementById('contactInfo');
+        if (contactInfoContainer) {
+            contactInfoContainer.innerHTML = '';
+            contact.contactInfo.forEach(info => {
+                const div = document.createElement('div');
+                div.className = 'contact-item';
+
+                const valueContent = info.href
+                    ? `<a href="${info.href}">${info.value}</a>`
+                    : `<p>${info.value}</p>`;
+
+                div.innerHTML = `
+                    <i class="${info.icon}"></i>
+                    <div>
+                        <h3>${info.label}</h3>
+                        ${valueContent}
+                    </div>
+                `;
+                contactInfoContainer.appendChild(div);
+            });
+        }
+
+        // Build contact form
+        const formContainer = document.getElementById('contactFormContainer');
+        if (formContainer) {
+            let formHTML = '<form class="contact-form" id="contactForm">';
+
+            contact.form.fields.forEach(field => {
+                formHTML += '<div class="form-group">';
+                if (field.type === 'textarea') {
+                    formHTML += `<textarea id="${field.id}" name="${field.id}" rows="${field.rows}" placeholder="${field.placeholder}" ${field.required ? 'required' : ''}></textarea>`;
+                } else {
+                    formHTML += `<input type="${field.type}" id="${field.id}" name="${field.id}" placeholder="${field.placeholder}" ${field.required ? 'required' : ''}>`;
+                }
+                formHTML += '</div>';
+            });
+
+            formHTML += `<button type="submit" class="btn btn-${contact.form.submitButton.type}">${contact.form.submitButton.text}</button>`;
+            formHTML += '</form>';
+
+            formContainer.innerHTML = formHTML;
+
+            // Re-attach form submit handler
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    alert(contact.form.successMessage);
+                    contactForm.reset();
+                });
+            }
+        }
+    } catch (error) {
+        console.error('Error loading contact data:', error);
+    }
+}
+
+// ==========================================================================
+// Load Footer
+// ==========================================================================
+async function loadFooter() {
+    try {
+        const response = await fetch('data/footer.json');
+        const footer = await response.json();
+
+        // Build copyright text
+        const copyrightContainer = document.getElementById('footerCopyright');
+        if (copyrightContainer) {
+            copyrightContainer.textContent = `© ${footer.copyright.year} ${footer.copyright.name}. ${footer.copyright.text}`;
+        }
+
+        // Build footer links
+        const linksContainer = document.getElementById('footerLinks');
+        if (linksContainer) {
+            linksContainer.innerHTML = '';
+            footer.links.forEach(link => {
+                const a = document.createElement('a');
+                a.href = link.url;
+                a.target = '_blank';
+                a.textContent = link.text;
+                linksContainer.appendChild(a);
+            });
+        }
+    } catch (error) {
+        console.error('Error loading footer data:', error);
+    }
+}
+
+// ==========================================================================
 // Navigation Toggle for Mobile
 // ==========================================================================
 const navToggle = document.getElementById('navToggle');
@@ -60,10 +324,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 async function loadExperience() {
     try {
         const response = await fetch('data/experience.json');
-        const experiences = await response.json();
-        const timeline = document.getElementById('experienceTimeline');
+        const data = await response.json();
 
-        experiences.forEach(exp => {
+        // Update section title
+        const sectionTitle = document.querySelector('#experience .section-title');
+        if (sectionTitle) sectionTitle.textContent = data.sectionTitle;
+
+        const timeline = document.getElementById('experienceTimeline');
+        const experiences = data.experiences || data; // Support both new and old format
+
+        (Array.isArray(experiences) ? experiences : [experiences]).forEach(exp => {
+            // Skip instruction entries
+            if (exp._instructions) return;
+
             const timelineItem = document.createElement('div');
             timelineItem.className = 'timeline-item';
 
@@ -99,10 +372,19 @@ async function loadExperience() {
 async function loadSkills() {
     try {
         const response = await fetch('data/skills.json');
-        const skillsData = await response.json();
-        const skillsGrid = document.getElementById('skillsGrid');
+        const data = await response.json();
 
-        skillsData.forEach(category => {
+        // Update section title
+        const sectionTitle = document.querySelector('#skills .section-title');
+        if (sectionTitle) sectionTitle.textContent = data.sectionTitle;
+
+        const skillsGrid = document.getElementById('skillsGrid');
+        const categories = data.categories || data; // Support both new and old format
+
+        (Array.isArray(categories) ? categories : [categories]).forEach(category => {
+            // Skip instruction entries
+            if (category._instructions) return;
+
             const skillCategory = document.createElement('div');
             skillCategory.className = 'skill-category';
 
@@ -129,10 +411,19 @@ async function loadSkills() {
 async function loadProjects() {
     try {
         const response = await fetch('data/projects.json');
-        const projects = await response.json();
-        const projectsGrid = document.getElementById('projectsGrid');
+        const data = await response.json();
 
-        projects.forEach(project => {
+        // Update section title
+        const sectionTitle = document.querySelector('#projects .section-title');
+        if (sectionTitle) sectionTitle.textContent = data.sectionTitle;
+
+        const projectsGrid = document.getElementById('projectsGrid');
+        const projects = data.projects || data; // Support both new and old format
+
+        (Array.isArray(projects) ? projects : [projects]).forEach(project => {
+            // Skip instruction entries
+            if (project._instructions) return;
+
             const projectCard = document.createElement('div');
             projectCard.className = 'project-card';
 
@@ -181,11 +472,23 @@ async function loadEducation() {
     try {
         const response = await fetch('data/education.json');
         const data = await response.json();
+
+        // Update section title
+        const sectionTitle = document.querySelector('#education .section-title');
+        if (sectionTitle) sectionTitle.textContent = data.sectionTitle;
+
+        // Update certifications title
+        const certTitle = document.querySelector('#education .certifications h3');
+        if (certTitle) certTitle.textContent = data.certificationsTitle || 'Certifications';
+
         const educationGrid = document.getElementById('educationGrid');
         const certGrid = document.getElementById('certGrid');
 
         // Load education items
         data.education.forEach(edu => {
+            // Skip instruction entries
+            if (edu._instructions) return;
+
             const eduItem = document.createElement('div');
             eduItem.className = 'education-item';
 
@@ -218,27 +521,9 @@ async function loadEducation() {
 }
 
 // ==========================================================================
-// Contact Form Handler
+// Contact Form Handler (Now handled in loadContact())
 // ==========================================================================
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value
-        };
-
-        // Here you would typically send the form data to a backend service
-        // For now, we'll just show an alert
-        alert('Thank you for your message! This is a demo form. In production, this would send your message.');
-
-        // Reset form
-        contactForm.reset();
-    });
-}
+// Form handler is now attached dynamically in loadContact() function
 
 // ==========================================================================
 // Scroll Reveal Animation
@@ -272,11 +557,18 @@ window.addEventListener('scroll', revealOnScroll);
 // ==========================================================================
 // Initialize Everything When DOM is Ready
 // ==========================================================================
-document.addEventListener('DOMContentLoaded', () => {
-    loadExperience();
-    loadSkills();
-    loadProjects();
-    loadEducation();
+document.addEventListener('DOMContentLoaded', async () => {
+    // Load all content from JSON files
+    await loadSiteConfig();
+    await loadNavigation();
+    await loadHero();
+    await loadAbout();
+    await loadExperience();
+    await loadSkills();
+    await loadProjects();
+    await loadEducation();
+    await loadContact();
+    await loadFooter();
 
     // Small delay to ensure elements are rendered before animation
     setTimeout(() => {

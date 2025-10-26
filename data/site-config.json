@@ -1,0 +1,18 @@
+{
+  "_instructions": "Site-wide configuration and meta tags. Update these values for SEO and branding.",
+  "meta": {
+    "title": "Adarsh Umesh | Product Manager & Full-Stack Engineer",
+    "description": "Adarsh Umesh - Product Manager & Full-Stack Engineer | Portfolio",
+    "author": "Adarsh Umesh",
+    "keywords": "Product Manager, Full-Stack Engineer, Software Development, JPMorgan Chase, Portfolio"
+  },
+  "branding": {
+    "name": "Adarsh Umesh",
+    "tagline": "Product Manager & Full-Stack Engineer"
+  },
+  "settings": {
+    "year": 2025,
+    "enableAnimations": true,
+    "navbarScrollEffect": true
+  }
+}

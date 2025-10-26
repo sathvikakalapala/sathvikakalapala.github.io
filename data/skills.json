@@ -1,32 +1,36 @@
-[
-  {
-    "_instructions": "Organize your skills into categories. Each category has a name, icon, and list of skills.",
-    "_iconHelp": "Use Font Awesome icons (https://fontawesome.com/icons). Format: 'fas fa-icon-name' or 'fab fa-brand-name'",
-    "category": "Category Name (e.g., Programming Languages)",
-    "icon": "fas fa-code",
-    "skills": [
-      "Skill 1",
-      "Skill 2",
-      "Skill 3",
-      "Add as many as needed"
-    ]
-  },
-  {
-    "category": "Frameworks & Tools",
-    "icon": "fas fa-toolbox",
-    "skills": [
-      "Framework 1",
-      "Framework 2",
-      "Tool 1"
-    ]
-  },
-  {
-    "category": "Soft Skills",
-    "icon": "fas fa-users",
-    "skills": [
-      "Leadership",
-      "Communication",
-      "Problem Solving"
-    ]
-  }
-]
+{
+  "_instructions": "Organize your skills into categories. Each category has a name, icon, and list of skills.",
+  "_iconHelp": "Use Font Awesome icons (https://fontawesome.com/icons). Format: 'fas fa-icon-name' or 'fab fa-brand-name'",
+  "sectionTitle": "Skills & Technologies",
+  "categories": [
+    {
+      "_instructions": "Example category - customize as needed",
+      "category": "Category Name (e.g., Programming Languages)",
+      "icon": "fas fa-code",
+      "skills": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 3",
+        "Add as many as needed"
+      ]
+    },
+    {
+      "category": "Frameworks & Tools",
+      "icon": "fas fa-toolbox",
+      "skills": [
+        "Framework 1",
+        "Framework 2",
+        "Tool 1"
+      ]
+    },
+    {
+      "category": "Soft Skills",
+      "icon": "fas fa-users",
+      "skills": [
+        "Leadership",
+        "Communication",
+        "Problem Solving"
+      ]
+    }
+  ]
+}

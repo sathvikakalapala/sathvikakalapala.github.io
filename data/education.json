@@ -1,7 +1,10 @@
 {
   "_instructions": "Add your education and certifications here.",
+  "sectionTitle": "Education & Certifications",
+  "certificationsTitle": "Certifications",
   "education": [
     {
+      "_instructions": "Example education entry - replace with your actual education",
       "degree": "Degree Name (e.g., Bachelor of Science in Computer Science)",
       "school": "University/College Name",
       "period": "Month Year - Month Year",

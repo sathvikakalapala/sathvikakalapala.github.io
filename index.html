@@ -15,7 +15,7 @@
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-brand">
-                <a href="#home">Adarsh Umesh</a>
+                <a href="#home"></a>
             </div>
             <button class="nav-toggle" id="navToggle">
                 <span></span>
@@ -23,13 +23,7 @@
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <!-- Navigation items will be loaded dynamically -->
             </ul>
         </div>
     </nav>
@@ -39,47 +33,18 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Hi, I'm <span class="highlight">Adarsh Umesh</span>
+                    <span id="heroGreeting"></span> <span class="highlight" id="heroName"></span>
                 </h1>
-                <h2 class="hero-subtitle">Product Manager & Full-Stack Engineer</h2>
-                <p class="hero-description">
-                    Currently driving digital banking innovation at <strong>JPMorgan Chase & Co.</strong>
-                    with 5+ years of experience delivering user-focused, scalable solutions across finance
-                    and technology domains. Expertise in product strategy, roadmapping, and leading
-                    cross-functional teams with a strong technical foundation in full-stack development
-                    and agile methodologies.
-                </p>
-                <div class="hero-highlights">
-                    <div class="highlight-item">
-                        <i class="fas fa-chart-line"></i>
-                        <span>18% User Adoption Increase</span>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-users"></i>
-                        <span>Leading Cross-Functional Teams</span>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-code"></i>
-                        <span>Full-Stack Technical Expert</span>
-                    </div>
+                <h2 class="hero-subtitle" id="heroTitle"></h2>
+                <p class="hero-description" id="heroSummary"></p>
+                <div class="hero-highlights" id="heroHighlights">
+                    <!-- Highlights will be loaded dynamically -->
                 </div>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="#projects" class="btn btn-secondary">View My Work</a>
-                    <a href="documents/Adarsh_Umesh_Resume.pdf" target="_blank" class="btn btn-secondary">
-                        <i class="fas fa-download"></i> Resume
-                    </a>
+                <div class="hero-cta" id="heroCTA">
+                    <!-- CTA buttons will be loaded dynamically -->
                 </div>
-                <div class="social-links">
-                    <a href="https://github.com/adarshumesh5" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/adarsh-umesh" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:connect2adarshum@gmail.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+                <div class="social-links" id="heroSocial">
+                    <!-- Social links will be loaded dynamically -->
                 </div>
             </div>
         </div>
@@ -88,36 +53,13 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title"></h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Product management professional with 5+ years of experience delivering user-focused,
-                        scalable solutions across finance and technology domains. Experienced in defining
-                        product vision, prioritizing roadmaps, and leading cross-functional teams to execute
-                        high-impact initiatives.
-                    </p>
-                    <p>
-                        Currently pursuing my M.S. in Engineering Management at California State University,
-                        Northridge, I bring strong ability to align business goals with technical feasibility,
-                        optimize processes, and drive continuous product improvement through data-informed
-                        decisions. As a Certified Scrum Master with a solid technical background, I bridge
-                        the gap between product strategy and engineering execution.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <h3>5+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>25%</h3>
-                            <p>Reduced Onboarding Time</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>18%</h3>
-                            <p>User Adoption Increase</p>
-                        </div>
-                    </div>
+                <div class="about-text" id="aboutText">
+                    <!-- Paragraphs will be loaded dynamically -->
+                </div>
+                <div class="about-stats" id="aboutStats">
+                    <!-- Statistics will be loaded dynamically -->
                 </div>
             </div>
         </div>
@@ -126,7 +68,7 @@
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
+            <h2 class="section-title"></h2>
             <div class="timeline" id="experienceTimeline">
                 <!-- Experience items will be loaded dynamically -->
             </div>
@@ -136,7 +78,7 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
+            <h2 class="section-title"></h2>
             <div class="skills-grid" id="skillsGrid">
                 <!-- Skills will be loaded dynamically -->
             </div>
@@ -146,7 +88,7 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title"></h2>
             <div class="projects-grid" id="projectsGrid">
                 <!-- Projects will be loaded dynamically -->
             </div>
@@ -156,13 +98,13 @@
     <!-- Education Section -->
     <section id="education" class="education">
         <div class="container">
-            <h2 class="section-title">Education & Certifications</h2>
+            <h2 class="section-title"></h2>
             <div class="education-content">
                 <div class="education-grid" id="educationGrid">
                     <!-- Education items will be loaded dynamically -->
                 </div>
                 <div class="certifications">
-                    <h3>Certifications</h3>
+                    <h3></h3>
                     <div class="cert-grid" id="certGrid">
                         <!-- Certifications will be loaded dynamically -->
                     </div>
@@ -174,58 +116,13 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title"></h2>
             <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <a href="mailto:connect2adarshum@gmail.com">connect2adarshum@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <a href="tel:+17473334258">+1 (747) 333-4258</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <p>Northridge, CA</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <div>
-                            <h3>LinkedIn</h3>
-                            <a href="https://linkedin.com/in/adarsh-umesh" target="_blank">in/adarsh-umesh</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <div>
-                            <h3>GitHub</h3>
-                            <a href="https://github.com/adarshumesh5" target="_blank">@adarshumesh5</a>
-                        </div>
-                    </div>
+                <div class="contact-info" id="contactInfo">
+                    <!-- Contact info will be loaded dynamically -->
                 </div>
-                <div class="contact-form-container">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                <div class="contact-form-container" id="contactFormContainer">
+                    <!-- Contact form will be loaded dynamically -->
                 </div>
             </div>
         </div>
@@ -234,10 +131,9 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Adarsh Umesh. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="https://github.com/adarshumesh5" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/adarsh-umesh" target="_blank">LinkedIn</a>
+            <p id="footerCopyright"></p>
+            <div class="footer-links" id="footerLinks">
+                <!-- Footer links will be loaded dynamically -->
             </div>
         </div>
     </footer>
