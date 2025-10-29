@@ -3,29 +3,56 @@
   "sectionTitle": "Professional Experience",
   "experiences": [
     {
-      "_instructions": "Example job entry - replace with your actual experience",
-      "title": "Job Title",
-      "company": "Company Name",
-      "period": "Start Date - End Date (e.g., Jan 2020 - Present)",
-      "location": "City, State/Country",
-      "description": "Brief 1-2 sentence description of your role and impact.",
+      "title": "Data Analyst (Healthcare)",
+      "company": "UnitedHealth Group",
+      "period": "Feb 2025 - Present",
+      "location": "Irving, TX",
+      "description": "Built claim-denial and utilization dashboards in Tableau over Snowflake (via dbt) that helped operations cut avoidable\ndenials by ~ 12% and reduce appeal cycle time by ~ 9%.\nRe-engineered high-volume SQL models (incremental merges, partitioning, window functions) and orchestrated hourly\nloads with Airflow, improving data freshness from daily to hourly.\nDefined risk/engagement KPIs with care-management; cohort analytics improved outreach contact rate by ~ 14%.\nInstituted DQ gates (row-count/NULL drift, schema diff) and alerting, reducing broken refreshes by > 80%.\nImplemented role-based access and field-level masking for PHI/PII; documented lineage in dbt for audit readiness.\nOptimized Tableau extracts (LOD tuning, parameterization) cutting dashboard open times by 35 - 40%.\nLed weekly stakeholder reviews; translated findings into action items that drove 2-3 ops process changes per quarter.",
       "responsibilities": [
-        "Key achievement or responsibility with metrics (e.g., Increased sales by 25%)",
-        "Another achievement showing impact",
-        "Technical or leadership contribution",
-        "Add as many as needed (3-8 recommended)"
+        "Built claim-denial and utilization dashboards in Tableau over Snowflake (via dbt) that helped operations cut avoidable",
+        "denials by ~ 12% and reduce appeal cycle time by ~ 9%",
+        "Re-engineered high-volume SQL models (incremental merges, partitioning, window functions) and orchestrated hourly",
+        "loads with Airflow, improving data freshness from daily to hourly",
+        "Defined risk/engagement KPIs with care-management; cohort analytics improved outreach contact rate by ~ 14%",
+        "Instituted DQ gates (row-count/NULL drift, schema diff) and alerting, reducing broken refreshes by > 80%",
+        "Implemented role-based access and field-level masking for PHI/PII; documented lineage in dbt for audit readiness",
+        "Optimized Tableau extracts (LOD tuning, parameterization) cutting dashboard open times by 35 - 40%",
+        "Led weekly stakeholder reviews; translated findings into action items that drove 2-3 ops process changes per quarter"
       ]
     },
     {
-      "title": "Previous Job Title",
-      "company": "Previous Company",
-      "period": "Month Year - Month Year",
-      "location": "City, State",
-      "description": "What you did in this role.",
+      "title": "Data Analyst (Healthcare Analytics)",
+      "company": "Citius Tech",
+      "period": "Sep 2021 - Dec 2022",
+      "location": "Hyderabad, India",
+      "description": "Modeled encounters/claims into star schemas and delivered Power BI storyboards for LOS, readmission, adherence;\nrefresh cadence moved from weekly to daily with automated checks.\nAuthored SQL stored procedures & reconciliation scripts reducing manual QA time by ~ 60% and refresh failures by\n> 80%.\nDesigned KPI dictionaries (metric definitions, caveats) to align clinicians, product, and engineering across releases.\nBuilt admission/readmission propensity features that prioritized outreach lists and lifted chronic-care enrollment by\n~7%.\nPackaged reusable DAX and date dimension logic, accelerating new dashboard rollouts by 30 - 40%.\nCreated sandbox notebooks (Python/Pandas) for exploratory analyses; standardized them into production dbt models.\nPresented insights to client stakeholders; secured adoption across 4 care-management teams.",
       "responsibilities": [
-        "Achievement with quantifiable results",
-        "Key project or initiative you led",
-        "Technologies or methodologies used"
+        "Modeled encounters/claims into star schemas and delivered Power BI storyboards for LOS, readmission, adherence;",
+        "refresh cadence moved from weekly to daily with automated checks",
+        "Authored SQL stored procedures & reconciliation scripts reducing manual QA time by ~ 60% and refresh failures by",
+        "Designed KPI dictionaries (metric definitions, caveats) to align clinicians, product, and engineering across releases",
+        "Built admission/readmission propensity features that prioritized outreach lists and lifted chronic-care enrollment by",
+        "Packaged reusable DAX and date dimension logic, accelerating new dashboard rollouts by 30 - 40%",
+        "Created sandbox notebooks (Python/Pandas) for exploratory analyses; standardized them into production dbt models",
+        "Presented insights to client stakeholders; secured adoption across 4 care-management teams"
+      ]
+    },
+    {
+      "title": "Data Analyst Intern → Associate (Consumer Electronics)",
+      "company": "Intex Technologies",
+      "period": "Jun 2020 - Sep 2021",
+      "location": "Hyderabad, India",
+      "description": "Analyzed retail sales, channel inventory, and warranty claims using SQL + Excel + Tableau; improved fill-rate by ~ 10%\nand reduced dead stock by ~ 8%.\nImplemented RFM segmentation and churn early-warning reports that increased repeat purchases by ~ 7%.\nAutomated weekly exec packs in Excel Power Query, cutting report prep time by ~ 75% and standardizing KPI\ndefinitions.\nIntroduced stock-aging and warranty-failure cohorts that informed pricing/promotions and reduced expedite POs.\nCreated data dictionary and lineage diagrams, improving onboarding speed for new analysts.\nPartnered with supply-chain to set alert thresholds for variance; reduced stock-outs in top SKUs by ~ 9%.\nBuilt demand forecasts (Python) with seasonal decomposition; maintained ±8 - 10% error bounds to guide procurement.",
+      "responsibilities": [
+        "Analyzed retail sales, channel inventory, and warranty claims using SQL + Excel + Tableau; improved fill-rate by ~ 10%",
+        "and reduced dead stock by ~ 8%",
+        "Implemented RFM segmentation and churn early-warning reports that increased repeat purchases by ~ 7%",
+        "Automated weekly exec packs in Excel Power Query, cutting report prep time by ~ 75% and standardizing KPI",
+        "definitions",
+        "Introduced stock-aging and warranty-failure cohorts that informed pricing/promotions and reduced expedite POs",
+        "Created data dictionary and lineage diagrams, improving onboarding speed for new analysts",
+        "Partnered with supply-chain to set alert thresholds for variance; reduced stock-outs in top SKUs by ~ 9%",
+        "Built demand forecasts (Python) with seasonal decomposition; maintained ±8 - 10% error bounds to guide procurement"
       ]
     }
   ]

@@ -1,21 +1,21 @@
 {
   "_instructions": "Hero section content - the first thing visitors see on your portfolio.",
   "greeting": "Hi, I'm",
-  "name": "Adarsh Umesh",
-  "title": "Product Manager & Full-Stack Engineer",
-  "summary": "Currently driving digital banking innovation at <strong>JPMorgan Chase & Co.</strong> with 5+ years of experience delivering user-focused, scalable solutions across finance and technology domains. Expertise in product strategy, roadmapping, and leading cross-functional teams with a strong technical foundation in full-stack development and agile methodologies.",
+  "name": "SATHVIKA KALAPALA",
+  "title": "Data Analyst",
+  "summary": "Data Analyst with 3+ years across the U.S. and India (healthcare and consumer electronics). Expert in turning raw, messy\ndata into automated pipelines and decision-ready dashboards. Strong in SQL, Python (Pandas/NumPy), Tableau/Power BI,\nand cloud data stacks (Snowflake, AWS, Databricks). Delivers measurable impact-lower denial rates, faster refresh SLAs,\nimproved forecast accuracy-while partnering closely with business and clinical stakeholders.",
   "highlights": [
     {
-      "icon": "fas fa-chart-line",
-      "text": "18% User Adoption Increase"
-    },
-    {
-      "icon": "fas fa-users",
-      "text": "Leading Cross-Functional Teams"
+      "icon": "fas fa-briefcase",
+      "text": "Professional Experience"
     },
     {
       "icon": "fas fa-code",
-      "text": "Full-Stack Technical Expert"
+      "text": "Technical Expertise"
+    },
+    {
+      "icon": "fas fa-users",
+      "text": "Team Collaboration"
     }
   ],
   "cta": {
@@ -23,36 +23,26 @@
       {
         "text": "Get In Touch",
         "href": "#contact",
-        "type": "primary"
+        "type": "primary",
+        "external": false
       },
       {
         "text": "View My Work",
         "href": "#projects",
-        "type": "secondary"
-      },
-      {
-        "text": "Resume",
-        "href": "documents/Adarsh_Umesh_Resume.pdf",
         "type": "secondary",
-        "icon": "fas fa-download",
-        "external": true
+        "external": false
       }
     ]
   },
   "socialLinks": [
     {
-      "platform": "GitHub",
-      "url": "https://github.com/adarshumesh5",
-      "icon": "fab fa-github"
-    },
-    {
       "platform": "LinkedIn",
-      "url": "https://linkedin.com/in/adarsh-umesh",
+      "url": "https://www.linkedin.com/in/sathvika-kalapala-6a902b12a",
       "icon": "fab fa-linkedin"
     },
     {
       "platform": "Email",
-      "url": "mailto:connect2adarshum@gmail.com",
+      "url": "mailto:sathvika.kalapala1211@gmail.com",
       "icon": "fas fa-envelope"
     }
   ]

@@ -6,36 +6,29 @@
       "type": "email",
       "icon": "fas fa-envelope",
       "label": "Email",
-      "value": "connect2adarshum@gmail.com",
-      "href": "mailto:connect2adarshum@gmail.com"
+      "value": "sathvika.kalapala1211@gmail.com",
+      "href": "mailto:sathvika.kalapala1211@gmail.com"
     },
     {
       "type": "phone",
       "icon": "fas fa-phone",
       "label": "Phone",
-      "value": "+1 (747) 333-4258",
-      "href": "tel:+17473334258"
+      "value": "+1 (940) 977-5627",
+      "href": "tel:19409775627"
     },
     {
       "type": "location",
       "icon": "fas fa-map-marker-alt",
       "label": "Location",
-      "value": "Northridge, CA",
+      "value": "Dallas-Fort Worth, TX",
       "href": null
     },
     {
       "type": "linkedin",
       "icon": "fab fa-linkedin",
       "label": "LinkedIn",
-      "value": "in/adarsh-umesh",
-      "href": "https://linkedin.com/in/adarsh-umesh"
-    },
-    {
-      "type": "github",
-      "icon": "fab fa-github",
-      "label": "GitHub",
-      "value": "@adarshumesh5",
-      "href": "https://github.com/adarshumesh5"
+      "value": "sathvika-kalapala-6a902b12a",
+      "href": "https://www.linkedin.com/in/sathvika-kalapala-6a902b12a"
     }
   ],
   "form": {
@@ -64,6 +57,6 @@
       "text": "Send Message",
       "type": "primary"
     },
-    "successMessage": "Thank you for your message! This is a demo form. In production, this would send your message."
+    "successMessage": "Thank you for your message! This is a demo form."
   }
 }

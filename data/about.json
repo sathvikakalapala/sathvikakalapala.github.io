@@ -2,21 +2,21 @@
   "_instructions": "About section content - tell your professional story and showcase key metrics.",
   "sectionTitle": "About Me",
   "paragraphs": [
-    "Product management professional with 5+ years of experience delivering user-focused, scalable solutions across finance and technology domains. Experienced in defining product vision, prioritizing roadmaps, and leading cross-functional teams to execute high-impact initiatives.",
-    "Currently pursuing my M.S. in Engineering Management at California State University, Northridge, I bring strong ability to align business goals with technical feasibility, optimize processes, and drive continuous product improvement through data-informed decisions. As a Certified Scrum Master with a solid technical background, I bridge the gap between product strategy and engineering execution."
+    "Data Analyst with 3+ years across the U.S. and India (healthcare and consumer electronics). Expert in turning raw, messy\ndata into automated pipelines and decision-ready dashboards. Strong in SQL, Python (Pandas/NumPy), Table",
+    "au/Power BI,\nand cloud data stacks (Snowflake, AWS, Databricks). Delivers measurable impact-lower denial rates, faster refresh SLAs,\nimproved forecast accuracy-while partnering closely with business and clinical stakeholders."
   ],
   "statistics": [
     {
-      "value": "5+",
-      "label": "Years Experience"
+      "value": "3",
+      "label": "Companies"
     },
     {
-      "value": "25%",
-      "label": "Reduced Onboarding Time"
+      "value": "0",
+      "label": "Project"
     },
     {
-      "value": "18%",
-      "label": "User Adoption Increase"
+      "value": "5",
+      "label": "Skills"
     }
   ]
 }

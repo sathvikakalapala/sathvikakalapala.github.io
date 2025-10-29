@@ -4,32 +4,39 @@
   "sectionTitle": "Skills & Technologies",
   "categories": [
     {
-      "_instructions": "Example category - customize as needed",
-      "category": "Category Name (e.g., Programming Languages)",
+      "category": "Programming Languages",
       "icon": "fas fa-code",
       "skills": [
-        "Skill 1",
-        "Skill 2",
-        "Skill 3",
-        "Add as many as needed"
+        "SQL",
+        "Python",
+        "Excel/Power Query"
       ]
     },
     {
-      "category": "Frameworks & Tools",
-      "icon": "fas fa-toolbox",
+      "category": "Tools & Platforms",
+      "icon": "fas fa-wrench",
       "skills": [
-        "Framework 1",
-        "Framework 2",
-        "Tool 1"
+        "Tableau",
+        "Power BI",
+        "Plotly/Matplotlib",
+        "dbt",
+        "Airflow",
+        "Snowflake",
+        "Azure Databricks",
+        "AWS (S3, Glue, Athena, Lambda)",
+        "Jira",
+        "Git"
       ]
     },
     {
-      "category": "Soft Skills",
-      "icon": "fas fa-users",
+      "category": "Technical Skills",
+      "icon": "fas fa-laptop-code",
       "skills": [
-        "Leadership",
-        "Communication",
-        "Problem Solving"
+        "Data Engineering",
+        "Cloud & Warehouses",
+        "Analytics & Methods",
+        "Domain",
+        "Collaboration & Process"
       ]
     }
   ]

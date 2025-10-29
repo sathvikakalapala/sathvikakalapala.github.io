@@ -4,27 +4,26 @@
   "certificationsTitle": "Certifications",
   "education": [
     {
-      "_instructions": "Example education entry - replace with your actual education",
-      "degree": "Degree Name (e.g., Bachelor of Science in Computer Science)",
-      "school": "University/College Name",
-      "period": "Month Year - Month Year",
-      "details": "Optional: Notable achievements, GPA, relevant coursework, etc."
+      "degree": "Master of Science",
+      "school": "University of North Texas",
+      "period": "Jan 2023 - Dec 2024",
+      "details": ""
     },
     {
-      "degree": "Another Degree",
-      "school": "Institution Name",
-      "period": "Year - Year",
+      "degree": "Bachelor of Science",
+      "school": "B. V. Raju Institute of Technology (BVRIT)",
+      "period": "Jul 2018 - Jul 2022",
       "details": ""
     }
   ],
   "certifications": [
     {
-      "name": "Certification Name",
-      "issuer": "Issuing Organization"
+      "name": "Snowflake SnowPro Core Certification",
+      "issuer": ""
     },
     {
-      "name": "Another Certification",
-      "issuer": "Organization"
+      "name": "Tableau Certified Data Analyst",
+      "issuer": ""
     }
   ]
 }

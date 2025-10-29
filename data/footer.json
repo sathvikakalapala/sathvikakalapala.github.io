@@ -2,17 +2,13 @@
   "_instructions": "Footer content - copyright and social links.",
   "copyright": {
     "text": "All rights reserved.",
-    "name": "Adarsh Umesh",
+    "name": "SATHVIKA KALAPALA",
     "year": 2025
   },
   "links": [
     {
-      "text": "GitHub",
-      "url": "https://github.com/adarshumesh5"
-    },
-    {
       "text": "LinkedIn",
-      "url": "https://linkedin.com/in/adarsh-umesh"
+      "url": "https://www.linkedin.com/in/sathvika-kalapala-6a902b12a"
     }
   ]
 }
